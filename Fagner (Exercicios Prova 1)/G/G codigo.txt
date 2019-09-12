@@ -1,0 +1,11 @@
+INPUT
+MOV R2, PIN
+LDI R0, #0
+LDI R1, #1
+AND R3, R2, R1
+BRE R3, R1 // se for verdadeiro eh impar, se for falso eh par (se for impar output 0, se for par output 1)
+JMP #9
+OUTPUT R0
+JMP #7
+OUTPUT R1
+JMP #9

@@ -1,0 +1,9 @@
+LDI R0, #0 //contador
+LDI R1 #1 // inicio
+LDI R8 #8 // para comprar com o contador
+OUTPUT R1 
+SHL R1, R1 // desloca R1 para a esquerda e salva em R1
+INC R0, R0 //incrementa +1 ao contador
+BRE R0, R8
+JMP #3
+JMP #0 //zera o contador

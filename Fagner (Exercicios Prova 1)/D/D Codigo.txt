@@ -1,0 +1,19 @@
+INPUT
+MOV R0, PIN
+LDI R1, #15
+LDI R2, #240
+AND R3, R0, R2 //vou ter XXXX0000
+AND R4, R0, R1 //vou ter 0000YYYY
+SHL R4, R4
+SHL R4, R4
+SHL R4, R4
+SHL R4, R4
+OR R5 , R4, R3 //faz um OR de XXXX0000 com YYYY0000. exemplo: 10110000 or 11010000 = 11110000
+AND R6, R4, R3 //faz uma AND de XXXX0000 com YYYY0000. exemplo 10110000 or 11010000 = 10010000, porem ainda tem que deslocar 4bits
+SHR R6, R6
+SHR R6, R6
+SHR R6, R6
+SHR R6, R6
+OR R7, R6, R5 //faz uma OR com R6 e R5, que R5 eh o resultado da OR  e R6 eh o resultado da AND delocado 4 bits para a direita
+OUTPUT R7
+JMP #17

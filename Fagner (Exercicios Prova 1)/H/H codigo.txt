@@ -1,0 +1,21 @@
+LDI R0, #72 //H
+LDI R1, #145 //e
+LDI R2, #108 //l
+LDI R3, #111 //o
+LDI R4, #87 // W
+LDI R5, #114 //r
+LDI R6, #100 //d
+LDI R7, #33 //!
+LDI R8, #32 //space
+OUTPUT R0 //H
+OUTPUT R1 //e
+OUTPUT R2 //l
+OUTPUT R2 //l
+OUTPUT R3 //o
+OUTPUT R8 //space
+OUTPUT R4 //W
+OUTPUT R3 //o
+OUTPUT R5 //r
+OUTPUT R2 //l
+OUTPUT R6 //d
+OUTPUT R7 //!

@@ -1,0 +1,13 @@
+LDI R1, #0 // contador
+LDI R9, #0 // somador
+LDI R4, #4
+INPUT
+MOV R0, PIN
+ADD R9, R9, R0
+INC R1, R1
+BRE R1,R8 //se for verdadeiro ja vai ter recebido os 4 valores
+JMP #3 
+SHR R9,R9
+SHR R9,R9
+OUTPUT R9
+JMP #12
